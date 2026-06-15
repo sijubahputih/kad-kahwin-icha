@@ -92,3 +92,66 @@ button {
   color: white;
   line-height: 1.6;
 }
+.flowers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.flowers span {
+  position: absolute;
+  top: -10%;
+  color: #f5d77b;
+  font-size: 22px;
+  animation: fall 8s linear infinite;
+  opacity: 0.8;
+}
+
+.flowers span:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.flowers span:nth-child(2) {
+  left: 25%;
+  animation-delay: 2s;
+}
+
+.flowers span:nth-child(3) {
+  left: 40%;
+  animation-delay: 4s;
+}
+
+.flowers span:nth-child(4) {
+  left: 60%;
+  animation-delay: 1s;
+}
+
+.flowers span:nth-child(5) {
+  left: 75%;
+  animation-delay: 3s;
+}
+
+.flowers span:nth-child(6) {
+  left: 90%;
+  animation-delay: 5s;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
