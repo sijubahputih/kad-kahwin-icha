@@ -236,15 +236,21 @@ button {
   font-weight: bold;
 }
 .gallery {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
   gap: 12px;
-  margin-top: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
 }
 
 .gallery img {
-  width: 100%;
-  border-radius: 16px;
-  border: 1px solid rgba(245, 215, 123, 0.7);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  width: 220px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  flex-shrink: 0;
+
+  border: 2px solid rgba(245,215,123,0.8);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.4);
 }
