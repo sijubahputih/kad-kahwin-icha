@@ -95,11 +95,19 @@
 
 <div class="card-box">
   <h3>RSVP Kehadiran</h3>
-  <p>Sila sahkan kehadiran anda melalui WhatsApp.</p>
+  <p>Sila sahkan kehadiran anda.</p>
 
-  <a class="gold-btn" href="https://wa.me/60123456789" target="_blank">
-    RSVP WhatsApp
-  </a>
+  <input type="text" id="rsvpName" placeholder="Nama anda">
+
+  <input type="number" id="rsvpPax" placeholder="Bilangan tetamu" min="1">
+
+  <select id="rsvpStatus">
+    <option value="">Pilih status kehadiran</option>
+    <option value="Hadir">Hadir</option>
+    <option value="Tidak Hadir">Tidak Hadir</option>
+  </select>
+
+  <button class="gold-btn" onclick="sendRSVP()">Hantar RSVP</button>
 </div>
     <div class="card-box doa-box">
   <h3>Doa Pengantin</h3>
