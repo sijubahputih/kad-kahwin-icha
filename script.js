@@ -28,3 +28,23 @@ setInterval(function () {
   document.getElementById("seconds").innerText =
     Math.floor((distance / 1000) % 60);
 }, 1000);
+const flowers = document.getElementById("flowers");
+
+for (let i = 0; i < 20; i++) {
+
+  const flower = document.createElement("div");
+
+  flower.classList.add("flower");
+
+  flower.innerHTML = ["✦","❀","✧","❁"][Math.floor(Math.random()*4)];
+
+  flower.style.left = Math.random() * 100 + "%";
+
+  flower.style.animationDuration =
+    (5 + Math.random() * 8) + "s";
+
+  flower.style.animationDelay =
+    Math.random() * 5 + "s";
+
+  flowers.appendChild(flower);
+}
