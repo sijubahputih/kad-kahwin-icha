@@ -30,7 +30,7 @@ setInterval(function () {
 }, 1000);
 const flowers = document.getElementById("flowers");
 
-for (let i = 0; i < 20; i++) {
+for (let i = 0; i < 35; i++) {
 
   const flower = document.createElement("div");
 
