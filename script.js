@@ -49,3 +49,9 @@ for (let i = 0; i < 35; i++) {
 
   flowers.appendChild(flower);
 }
+const params = new URLSearchParams(window.location.search);
+const guest = params.get("to");
+
+if (guest) {
+  document.getElementById("guestName").innerText = guest;
+}
