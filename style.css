@@ -448,7 +448,7 @@ button.gold-btn {
 .door-text {
   position: absolute;
   inset: 0;
-  padding: 30px;
+  padding: 25px;
 
   display: flex;
   flex-direction: column;
