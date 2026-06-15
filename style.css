@@ -269,3 +269,16 @@ button {
   font-style: italic;
   font-size: 18px;
 }
+.guest-label {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.guest-name {
+  color: #f5d77b;
+  font-size: 28px;
+  margin: 0 0 20px;
+  font-style: italic;
+}
