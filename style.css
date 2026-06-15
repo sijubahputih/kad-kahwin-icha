@@ -426,14 +426,15 @@ button.gold-btn {
 
 .door-handle {
   position: absolute;
-  top: 52%;
-  width: 20px;
-  height: 20px;
+  top: 58%;
+  width: 10px;
+  height: 10px;
   background: #f5d77b;
   border-radius: 50%;
+
   box-shadow:
-    0 0 12px rgba(245,215,123,0.9),
-    0 0 28px rgba(245,215,123,0.45);
+    0 0 6px rgba(245,215,123,0.8),
+    0 0 12px rgba(245,215,123,0.4);
 }
 
 .left-handle {
