@@ -467,6 +467,7 @@ button.gold-btn {
 .door-text .name {
   color: #f5d77b;
   font-size: 34px;
+  margin-top: 40px;
 }
 
 .door-text .label,
