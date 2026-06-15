@@ -1,13 +1,16 @@
 function openInvitation() {
-  document.getElementById("cover").style.display = "none";
-  document.getElementById("main").style.display = "flex";
+  document.body.classList.add("open-door");
 
   const music = document.getElementById("bgMusic");
 
-  music.play().catch(function(error) {
-    alert("Tekan sekali lagi untuk hidupkan lagu.");
-    console.log(error);
-  });
+  setTimeout(function () {
+    document.getElementById("cover").style.display = "none";
+    document.getElementById("main").style.display = "flex";
+
+    music.play().catch(function(error) {
+      console.log(error);
+    });
+  }, 1800);
 }
 
 const weddingDate = new Date("December 20, 2026 11:00:00").getTime();
