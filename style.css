@@ -307,3 +307,13 @@ button.gold-btn {
   cursor: pointer;
   font-size: 15px;
 }
+.card-box {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: all 0.8s ease;
+}
+
+.card-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
