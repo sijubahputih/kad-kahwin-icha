@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <section class="cover">
+  <section class="cover" id="cover">
     <h1 class="jawi">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
 
     <p class="label">WALIMATUL URUS</p>
@@ -18,8 +18,44 @@
     <p class="and">&</p>
     <h1 class="name">Pasangan</h1>
 
-    <button>Buka Jemputan</button>
+    <button onclick="openInvitation()">Buka Jemputan</button>
   </section>
 
+  <section class="main" id="main">
+    <h1 class="jawi">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
+
+    <p class="label">MAJLIS PERKAHWINAN</p>
+
+    <h1 class="name">Icha</h1>
+    <p class="and">&</p>
+    <h1 class="name">Pasangan</h1>
+
+    <p class="date">Sabtu, 20 Disember 2026</p>
+
+    <div class="countdown">
+      <div>
+        <span id="days">0</span>
+        <small>Hari</small>
+      </div>
+      <div>
+        <span id="hours">0</span>
+        <small>Jam</small>
+      </div>
+      <div>
+        <span id="minutes">0</span>
+        <small>Minit</small>
+      </div>
+      <div>
+        <span id="seconds">0</span>
+        <small>Saat</small>
+      </div>
+    </div>
+
+    <p class="invite">
+      Dengan penuh kesyukuran, kami menjemput tuan/puan ke majlis walimatul urus kami.
+    </p>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
