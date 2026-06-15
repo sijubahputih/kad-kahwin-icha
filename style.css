@@ -438,22 +438,23 @@ button.gold-btn {
 }
 
 .left-handle {
-  right: 20px;
+  right: 18px;
 }
 
 .right-handle {
-  left: 20px;
+  left: 18px;
 }
 
 .door-text {
   position: absolute;
   inset: 0;
-  z-index: 5;
+  padding: 25px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  pointer-events: none;
-  padding: 25px;
+
+  transform: translateY(-40px);
 }
 
 .door-text .jawi {
