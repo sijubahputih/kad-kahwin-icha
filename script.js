@@ -3,7 +3,11 @@ function openInvitation() {
   document.getElementById("main").style.display = "flex";
 
   const music = document.getElementById("bgMusic");
-  music.play();
+
+  music.play().catch(function(error) {
+    alert("Tekan sekali lagi untuk hidupkan lagu.");
+    console.log(error);
+  });
 }
 
 const weddingDate = new Date("December 20, 2026 11:00:00").getTime();
