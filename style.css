@@ -70,10 +70,18 @@ button {
 }
 
 .countdown div {
-  border: 1px solid #f5d77b;
-  border-radius: 14px;
-  padding: 10px;
-  width: 62px;
+  width: 72px;
+  padding: 16px 10px;
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(245,215,123,0.7);
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.25);
 }
 
 .countdown span {
@@ -228,13 +236,28 @@ button {
 
 .gold-btn {
   display: inline-block;
-  margin-top: 12px;
-  padding: 13px 24px;
-  border-radius: 40px;
-  background: #f5d77b;
+
+  background: linear-gradient(
+    135deg,
+    #f5d77b,
+    #e9c85a
+  );
+
   color: #003c32;
-  text-decoration: none;
+
   font-weight: bold;
+
+  border-radius: 50px;
+
+  padding: 14px 24px;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.gold-btn:hover {
+  transform: scale(1.05);
 }
 .gallery {
   display: flex;
