@@ -36,7 +36,8 @@ for (let i = 0; i < 35; i++) {
 
   flower.classList.add("flower");
 
-  flower.innerHTML = ["✦","❀","✧","❁"][Math.floor(Math.random()*4)];
+  flower.innerHTML =
+["🌸","✨","🌺","❀","✦","💮"][Math.floor(Math.random()*6)];
 
   flower.style.left = Math.random() * 100 + "%";
 
