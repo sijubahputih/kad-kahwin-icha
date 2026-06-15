@@ -426,7 +426,7 @@ button.gold-btn {
 
 .door-handle {
   position: absolute;
-  top: 58%;
+  top: 50%;
   width: 10px;
   height: 10px;
   background: #f5d77b;
@@ -448,7 +448,7 @@ button.gold-btn {
 .door-text {
   position: absolute;
   inset: 0;
-  padding: 25px;
+  padding: 30px;
 
   display: flex;
   flex-direction: column;
