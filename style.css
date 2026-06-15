@@ -106,8 +106,12 @@ button {
   position: absolute;
   top: -50px;
   color: gold;
-  font-size: 28px;
+  font-size: 50px;
   animation: falling linear infinite;
+  text-shadow:
+    0 0 10px rgba(255,215,0,0.8),
+    0 0 20px rgba(255,215,0,0.6),
+    0 0 30px rgba(255,215,0,0.4);
 }
 
 @keyframes falling {
