@@ -55,3 +55,25 @@ const guest = params.get("to");
 if (guest) {
   document.getElementById("guestName").innerText = guest;
 }
+function sendRSVP() {
+  const name = document.getElementById("rsvpName").value;
+  const pax = document.getElementById("rsvpPax").value;
+  const status = document.getElementById("rsvpStatus").value;
+
+  if (name === "" || pax === "" || status === "") {
+    alert("Sila lengkapkan nama, bilangan tetamu dan status kehadiran.");
+    return;
+  }
+
+  const phone = "601135705157";
+
+  const message =
+    "Assalamualaikum, saya ingin RSVP majlis perkahwinan.%0A%0A" +
+    "Nama: " + name + "%0A" +
+    "Bilangan Tetamu: " + pax + "%0A" +
+    "Status Kehadiran: " + status;
+
+  const url = "https://wa.me/" + phone + "?text=" + message;
+
+  window.open(url, "_blank");
+}
