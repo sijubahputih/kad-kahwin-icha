@@ -1,6 +1,9 @@
 function openInvitation() {
   document.getElementById("cover").style.display = "none";
   document.getElementById("main").style.display = "flex";
+
+  const music = document.getElementById("bgMusic");
+  music.play();
 }
 
 const weddingDate = new Date("December 20, 2026 11:00:00").getTime();
