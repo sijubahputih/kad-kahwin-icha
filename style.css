@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #003c32;
+  color: #f5d77b;
+  text-align: center;
+}
+
+.cover {
+  min-height: 100vh;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: radial-gradient(circle, #00614f, #002b24);
+}
+
+.jawi {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.label {
+  letter-spacing: 4px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.name {
+  font-size: 46px;
+  margin: 10px 0;
+  color: #f5d77b;
+}
+
+.and {
+  font-size: 24px;
+  color: white;
+}
+
+button {
+  margin-top: 35px;
+  padding: 14px 32px;
+  border: 1px solid #f5d77b;
+  background: transparent;
+  color: #f5d77b;
+  border-radius: 50px;
+  font-size: 16px;
+}
