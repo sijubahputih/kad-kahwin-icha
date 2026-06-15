@@ -4,6 +4,7 @@ body {
   background: #003c32;
   color: #f5d77b;
   text-align: center;
+  position: relative;
 }
 
 .cover {
@@ -316,4 +317,24 @@ button.gold-btn {
 .card-box.show {
   opacity: 1;
   transform: translateY(0);
+}
+.songket-frame {
+  position: fixed;
+  inset: 12px;
+  border: 2px solid rgba(245,215,123,0.8);
+  pointer-events: none;
+  z-index: 999;
+}
+
+.songket-frame::before,
+.songket-frame::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(245,215,123,0.4);
+}
+
+.songket-frame::after {
+  inset: 16px;
+  border: 1px dashed rgba(245,215,123,0.3);
 }
