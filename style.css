@@ -254,3 +254,18 @@ button {
   box-shadow:
     0 10px 30px rgba(0,0,0,0.4);
 }
+.doa-box {
+  background: rgba(245, 215, 123, 0.08);
+}
+
+.arabic {
+  font-size: 22px;
+  line-height: 1.9;
+  color: #f5d77b !important;
+}
+
+.signature {
+  color: #f5d77b !important;
+  font-style: italic;
+  font-size: 18px;
+}
