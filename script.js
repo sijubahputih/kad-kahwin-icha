@@ -77,3 +77,16 @@ function sendRSVP() {
 
   window.open(url, "_blank");
 }
+const observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+document.querySelectorAll(".card-box").forEach(function(card) {
+  observer.observe(card);
+});
