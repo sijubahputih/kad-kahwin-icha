@@ -235,3 +235,16 @@ button {
   text-decoration: none;
   font-weight: bold;
 }
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(245, 215, 123, 0.7);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
