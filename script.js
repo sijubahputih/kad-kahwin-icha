@@ -81,8 +81,16 @@ for (let i = 0; i < 35; i++) {
 
   flower.classList.add("flower");
 
-  flower.innerHTML =
-["🌸","✨","🌺","❀","✦","💮"][Math.floor(Math.random()*6)];
+  const icons=[
+"🌸",
+"🌺",
+"🩷",
+"💖",
+"✨",
+"🤍",
+"❀",
+"💮"
+];
 
   flower.style.left = Math.random() * 100 + "%";
 
