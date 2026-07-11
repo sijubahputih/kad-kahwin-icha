@@ -1,12 +1,4 @@
-window.addEventListener("load", function(){
 
-    const intro=document.getElementById("introMusic");
-
-    intro.volume=0.35;
-
-    intro.play().catch(()=>{});
-
-});
 document.getElementById("groomName").innerHTML =
     wedding.groomFirst +
     "<span>" +
@@ -30,45 +22,38 @@ document.getElementById("brideName2").innerHTML =
     "<span>" +
     wedding.brideLast +
     "</span>";
-function openInvitation(){
+async function openInvitation() {
+  const cover = document.getElementById("cover");
+  const mainPage = document.getElementById("main");
+  const introMusic = document.getElementById("introMusic");
+  const mainMusic = document.getElementById("mainMusic");
 
-    document.body.classList.add("open-door");
+  document.body.classList.add("open-door");
 
-    const intro=document.getElementById("introMusic");
+  try {
+    introMusic.currentTime = 0;
+    introMusic.volume = 0.6;
+    await introMusic.play();
+  } catch (error) {
+    console.error("Intro gagal dimainkan:", error);
+  }
 
-    const main=document.getElementById("mainMusic");
+  setTimeout(async function () {
+    introMusic.pause();
+    introMusic.currentTime = 0;
 
-    // Fade out intro
-    let fade=setInterval(function(){
+    cover.style.display = "none";
+    mainPage.style.display = "flex";
 
-        if(intro.volume>0.05){
-
-            intro.volume-=0.05;
-
-        }else{
-
-            clearInterval(fade);
-
-            intro.pause();
-
-            intro.currentTime=0;
-
-        }
-
-    },80);
-
-    setTimeout(function(){
-
-        document.getElementById("cover").style.display="none";
-
-        document.getElementById("main").style.display="flex";
-
-        main.volume=0.5;
-
-        main.play().catch(()=>{});
-
-    },1800);
-
+    try {
+      mainMusic.currentTime = 0;
+      mainMusic.volume = 0.5;
+      await mainMusic.play();
+    } catch (error) {
+      console.error("Lagu utama gagal dimainkan:", error);
+      alert("Tekan butang muzik untuk memainkan lagu.");
+    }
+  }, 1800);
 }
 
 const weddingDate = new Date("December 19, 2026 11:00:00").getTime();
