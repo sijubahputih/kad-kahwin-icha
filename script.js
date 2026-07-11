@@ -1,3 +1,26 @@
+document.getElementById("groomName").innerHTML =
+    wedding.groomFirst +
+    "<span>" +
+    wedding.groomLast +
+    "</span>";
+
+document.getElementById("brideName").innerHTML =
+    wedding.brideFirst +
+    "<span>" +
+    wedding.brideLast +
+    "</span>";
+
+document.getElementById("groomName2").innerHTML =
+    wedding.groomFirst +
+    "<span>" +
+    wedding.groomLast +
+    "</span>";
+
+document.getElementById("brideName2").innerHTML =
+    wedding.brideFirst +
+    "<span>" +
+    wedding.brideLast +
+    "</span>";
 function openInvitation() {
   document.body.classList.add("open-door");
 
