@@ -22,37 +22,36 @@ document.getElementById("brideName2").innerHTML =
     "<span>" +
     wedding.brideLast +
     "</span>";
-async function openInvitation() {
+
+function openInvitation() {
   const cover = document.getElementById("cover");
   const mainPage = document.getElementById("main");
-  const introMusic = document.getElementById("introMusic");
-  const mainMusic = document.getElementById("mainMusic");
+  const music = document.getElementById("weddingMusic");
 
   document.body.classList.add("open-door");
 
-  try {
-    introMusic.currentTime = 0;
-    introMusic.volume = 0.6;
-    await introMusic.play();
-  } catch (error) {
-    console.error("Intro gagal dimainkan:", error);
-  }
+  music.src = "./intro.mp3";
+  music.loop = false;
+  music.volume = 0.7;
+  music.currentTime = 0;
 
-  setTimeout(async function () {
-    introMusic.pause();
-    introMusic.currentTime = 0;
+  music.play().catch(function (error) {
+    console.log("Intro gagal dimainkan:", error);
+  });
 
+  setTimeout(function () {
     cover.style.display = "none";
     mainPage.style.display = "flex";
 
-    try {
-      mainMusic.currentTime = 0;
-      mainMusic.volume = 0.5;
-      await mainMusic.play();
-    } catch (error) {
-      console.error("Lagu utama gagal dimainkan:", error);
-      alert("Tekan butang muzik untuk memainkan lagu.");
-    }
+    music.pause();
+    music.src = "./main.mp3";
+    music.loop = true;
+    music.volume = 0.5;
+    music.load();
+
+    music.play().catch(function (error) {
+      console.log("Lagu utama gagal dimainkan:", error);
+    });
   }, 1800);
 }
 
