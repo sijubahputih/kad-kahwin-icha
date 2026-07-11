@@ -1,3 +1,12 @@
+window.addEventListener("load", function(){
+
+    const intro=document.getElementById("introMusic");
+
+    intro.volume=0.35;
+
+    intro.play().catch(()=>{});
+
+});
 document.getElementById("groomName").innerHTML =
     wedding.groomFirst +
     "<span>" +
@@ -21,19 +30,45 @@ document.getElementById("brideName2").innerHTML =
     "<span>" +
     wedding.brideLast +
     "</span>";
-function openInvitation() {
-  document.body.classList.add("open-door");
+function openInvitation(){
 
-  const music = document.getElementById("bgMusic");
+    document.body.classList.add("open-door");
 
-  setTimeout(function () {
-    document.getElementById("cover").style.display = "none";
-    document.getElementById("main").style.display = "flex";
+    const intro=document.getElementById("introMusic");
 
-    music.play().catch(function(error) {
-      console.log(error);
-    });
-  }, 1800);
+    const main=document.getElementById("mainMusic");
+
+    // Fade out intro
+    let fade=setInterval(function(){
+
+        if(intro.volume>0.05){
+
+            intro.volume-=0.05;
+
+        }else{
+
+            clearInterval(fade);
+
+            intro.pause();
+
+            intro.currentTime=0;
+
+        }
+
+    },80);
+
+    setTimeout(function(){
+
+        document.getElementById("cover").style.display="none";
+
+        document.getElementById("main").style.display="flex";
+
+        main.volume=0.5;
+
+        main.play().catch(()=>{});
+
+    },1800);
+
 }
 
 const weddingDate = new Date("December 19, 2026 11:00:00").getTime();
