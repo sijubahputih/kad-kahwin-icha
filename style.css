@@ -1,10 +1,10 @@
-body {
-  margin: 0;
-  font-family: Georgia, serif;
-  background: #003c32;
-  color: #f5d77b;
-  text-align: center;
-  position: relative;
+body{
+    background:linear-gradient(
+        180deg,
+        #FFF8FA,
+        #FDEEF2,
+        #F9E4EA
+    );
 }
 
 .cover {
@@ -118,9 +118,8 @@ button {
   font-size: 50px;
   animation: falling linear infinite;
   text-shadow:
-    0 0 10px rgba(255,215,0,0.8),
-    0 0 20px rgba(255,215,0,0.6),
-    0 0 30px rgba(255,215,0,0.4);
+0 0 8px rgba(255,182,193,.9),
+0 0 18px rgba(216,164,180,.6);
 }
 
 @keyframes falling {
@@ -234,26 +233,30 @@ button {
   line-height: 1.5;
 }
 
-.gold-btn {
-  display: inline-block;
+.gold-btn{
 
-  background: linear-gradient(
-    135deg,
-    #f5d77b,
-    #e9c85a
-  );
+background:
 
-  color: #003c32;
+linear-gradient(
 
-  font-weight: bold;
+135deg,
 
-  border-radius: 50px;
+#E8A7B6,
 
-  padding: 14px 24px;
+#D98A9F
 
-  text-decoration: none;
+);
 
-  transition: 0.3s;
+color:white;
+
+border:none;
+
+box-shadow:
+
+0 10px 25px
+
+rgba(216,164,180,.45);
+
 }
 
 .gold-btn:hover {
@@ -273,7 +276,7 @@ button {
   border-radius: 20px;
   flex-shrink: 0;
 
-  border: 2px solid rgba(245,215,123,0.8);
+  border:1px solid rgba(216,164,180,.8);
 
   box-shadow:
     0 10px 30px rgba(0,0,0,0.4);
@@ -376,13 +379,30 @@ button.gold-btn {
   animation: doorFloat 3s ease-in-out infinite;
 }
 
-.gold-light {
-  position: absolute;
-  inset: 15%;
-  background: radial-gradient(circle, rgba(245,215,123,0.7), rgba(245,215,123,0.1), transparent 70%);
-  filter: blur(20px);
-  opacity: 0.45;
-  z-index: 0;
+.gold-light{
+
+position:absolute;
+
+inset:15%;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(255,220,230,.95),
+
+rgba(255,190,210,.45),
+
+transparent 75%
+
+);
+
+filter:blur(35px);
+
+opacity:.8;
+
 }
 
 .door {
@@ -392,8 +412,12 @@ button.gold-btn {
   height: 100%;
   background:
     linear-gradient(135deg, rgba(245,215,123,0.18), transparent 30%),
-    linear-gradient(145deg, #00614f, #002b24);
-  border: 2px solid #f5d77b;
+    linear-gradient(
+145deg,
+#F8DDE3,
+#EFC7D1
+);
+  border:2px solid #D8A4B4;
   box-shadow: 0 25px 60px rgba(0,0,0,0.45);
   transition: transform 1.8s ease, opacity 1.8s ease;
   z-index: 3;
@@ -465,7 +489,7 @@ button.gold-btn {
   text-shadow: 0 2px 8px rgba(0,0,0,0.8);
 }
 .door-text .name{
-    color:#f5d77b;
+    color:#C88A9A;
     font-size:34px;
     line-height:1.15;
     margin:18px 0;
