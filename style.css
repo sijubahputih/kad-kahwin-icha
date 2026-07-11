@@ -464,10 +464,29 @@ button.gold-btn {
   z-index: 21;
   text-shadow: 0 2px 8px rgba(0,0,0,0.8);
 }
-.door-text .name {
-  color: #f5d77b;
-  font-size: 34px;
-  margin-top: 40px;
+.door-text .name{
+    color:#f5d77b;
+    font-size:34px;
+    line-height:1.15;
+    margin:18px 0;
+    font-weight:700;
+}
+
+.door-text .name span{
+    display:block;
+    font-size:18px;
+    font-weight:400;
+    letter-spacing:2px;
+    color:#fff6d5;
+    margin-top:6px;
+}
+
+.majlis-title{
+    color:#ffffff;
+    letter-spacing:5px;
+    font-size:14px;
+    margin-bottom:28px;
+}
 }
 
 .door-text .label,
